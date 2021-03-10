@@ -443,7 +443,7 @@ WHWP = pd.read_csv('dataWHWP.csv', skipfooter=8, engine='python', skiprows = [i 
 
 PNA = pd.read_csv('dataPNA.csv', skipfooter=3, engine='python', skiprows = [i for i in range(1,3)])
 
-SOI = pd.read_csv('dataSOI.csv', skiprows= [i for i in range(1,88)], skipfooter=10, engine='python')
+SOI = pd.read_csv('dataSOI.csv', skiprows= [i for i in range(1,88)], skipfooter=9, engine='python')
 SOI.iloc[-1] = SOI.iloc[-1].replace('-999.9', '', regex=True)
 SOI = SOI.apply(pd.to_numeric)
 SOI.index = pd.RangeIndex(start=1, stop=len(AMO['YEAR']), step=1)
